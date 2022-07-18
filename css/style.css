@@ -1,0 +1,36 @@
+.container {
+    display: grid;
+    place-items: center;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    height: 599px;
+    width: 500px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+
+.board>div {
+    display: flex;
+}
+
+.board>div:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.cell {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    background-color: rgb(122, 164, 122);
+    text-align: center;
+    line-height: 50px;
+}
+
+.board>div:nth-child(2n)>div:nth-child(2n+1),
+.board>div:nth-child(2n + 1)>div:nth-child(2n + 1) {
+    background-color: white;
+}
